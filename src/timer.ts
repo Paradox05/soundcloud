@@ -5,16 +5,15 @@ export class Timer{
         
     }
 
-    public startTimer() {
+    public tick() {
         let timeStart = new Date().getTime();
         return {
-            /** <integer>s e.g 2s etc. */
-            get seconds() {
-                const seconds = Math.ceil((new Date().getTime() - timeStart) / 1000) + 's';
+            
+            get time1() {
+                const seconds = (new Date().getTime() - timeStart / 1000) + 's';
                 return seconds;
             },
-            /** Milliseconds e.g. 2000ms etc. */
-            get ms() {
+            get time2() {
                 const ms = (new Date().getTime() - timeStart) + 's';
                 return ms;
             }
