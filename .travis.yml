@@ -13,8 +13,6 @@ install:
 script:
 - |
   echo ">>> Compile vscode-test"
-  echo ">>> Compiled vscode-test"
-  cd src
-  tsc extension.ts | node extension.js
+  
 cache: node
   
