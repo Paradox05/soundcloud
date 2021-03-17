@@ -11,8 +11,8 @@ suite('Extension Test Suite', () => {
 
 	test('Sample test', () => {
 		const time = new Timer();
-		let result = time.startTimer().seconds;
-		let timeMs = time.startTimer().ms;
+		let result = time.tick().time1;
+		let timeMs = time.tick().time2;
 		
 		assert.equal(result,timeMs);
 
