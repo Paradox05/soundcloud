@@ -15,7 +15,7 @@ export class Timer{
             },
             /** Milliseconds e.g. 2000ms etc. */
             get ms() {
-                const ms = (new Date().getTime() - timeStart) + 'ms';
+                const ms = (new Date().getTime() - timeStart) + 's';
                 return ms;
             }
         }
