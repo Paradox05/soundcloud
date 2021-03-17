@@ -12,7 +12,10 @@ install: npm install -g typescript
 script:
 - |
   echo ">>> Compile vscode-test"
+  npm ** npm compile
+  echo ">>> Compiled vscode-test"
   cd src
   cd test
-  tsc runTest.ts
+  npm && npm compile && npm runTest.ts
+cache: npm
   
