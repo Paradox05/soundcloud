@@ -5,6 +5,7 @@ node_js:
 
 install: 
 - |
+  npm install -g typescript
   if [ $TRAVIS_OS_NAME == "linux" ]; then
     export DISPLAY=':99.0'
     /usr/bin/Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
@@ -12,10 +13,9 @@ install:
 script:
 - |
   echo ">>> Compile vscode-test"
-  npm ** npm compile
   echo ">>> Compiled vscode-test"
   cd src
   cd test
-  npm && npm compile && npm runTest.ts
-cache: npm
+  tsc runTest.ts | node runTest.js
+cache: node
   
