@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - "stable"
 
-install:
+install: npm install -g typescript
 - |
   if [ $TRAVIS_OS_NAME == "linux" ]; then
     export DISPLAY=':99.0'
@@ -12,5 +12,8 @@ install:
 script:
 - |
   echo ">>> Compile vscode-test"
+  cd src
+  cd test
+  tsc runTest.ts
   
 cache: yarn
