@@ -16,4 +16,3 @@ script:
   cd test
   tsc runTest.ts
   
-cache: yarn
