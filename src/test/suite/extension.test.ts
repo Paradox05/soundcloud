@@ -12,9 +12,10 @@ suite('Extension Test Suite', () => {
 	test('Sample test', () => {
 		const time = new Timer();
 		let result = time.tick().time1;
-		let timeMs = time.tick().time2;
+		let start = new Date().getTime();
+		let time2 = (new Date().getTime() - start);
 		
-		assert.equal(result,timeMs);
+		assert.equal(result,time2);
 
 	});
 });
