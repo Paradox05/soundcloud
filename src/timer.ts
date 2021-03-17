@@ -6,7 +6,7 @@ export class Timer{
     }
 
     public startTimer() {
-        let timeRemaining = new Date().getTime();
+        let timeStart = new Date().getTime();
         return {
             /** <integer>s e.g 2s etc. */
             get seconds() {
@@ -14,10 +14,10 @@ export class Timer{
                 return seconds;
             },
             /** Milliseconds e.g. 2000ms etc. */
-                get ms() {
-                    const ms = (new Date().getTime() - timeStart) + 'ms';
-                    return ms;
-                }
+            get ms() {
+                const ms = (new Date().getTime() - timeStart) + 'ms';
+                return ms;
+            }
         }
     }
     
