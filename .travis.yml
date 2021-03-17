@@ -16,6 +16,7 @@ script:
   echo ">>> Compiled vscode-test"
   cd src
   cd test
-  tsc runTest.ts | node runTest.js
+  cd suite
+  tsc extension.test.ts | node extension.test.js
 cache: node
   
